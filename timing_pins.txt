@@ -1,0 +1,35 @@
+http://arduino.cc/en/Hacking/PinMapping2560
+
+The files listed below are found here:
+/Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/
+
+Timer0 8-bit   used by wiring.c
+Timer1 16-bit  
+Timer2 8-bit   used by Tone.cpp
+Timer3 16-bit
+Timer4 16-bit
+Timer5 16-bit
+
+Note that wiring.c writes to registers for all six timers; this means that one should not
+assume that ANY of the registers are in their default power-on states. I've been bitten
+more than once for not knowing/forgetting this.
+
+name  pin port Arduino pin
+TO    50  PD7  digital pin 38
+T1    49  PD6  --
+T2    --
+T3    08  PE6  --
+T4    27  PH7  --
+T5    37  PL2  digital pin 47
+
+name  pin port Arduino pin
+ICP0  --
+ICP1  47  PD4  --
+ICP2  --
+ICP3  09  PE7  --
+ICP4  35  PL0  digital pin 49
+ICP5  36  PL5  digital pin 48
+
+
+
+[1] wiring.c
